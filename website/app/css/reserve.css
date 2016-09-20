@@ -20,8 +20,15 @@
   font-weight: normal; }
 
 .reserve {
+  position: relative;
   background-color: #f1f1f1; }
+  .reserve #particles-js2 {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
   .reserve .wrap {
+    position: relative;
+    z-index: 999;
     width: 100%;
     max-width: 970px;
     height: auto;

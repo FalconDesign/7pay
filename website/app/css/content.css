@@ -23,7 +23,19 @@
   width: 100%;
   min-height: 700px;
   background: url("../img/11.jpg") no-repeat center/cover; }
+  .content #particles-js {
+    position: absolute;
+    height: 700px;
+    width: 100%; }
+    .content #particles-js canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
   .content .main-header {
+    position: relative;
+    z-index: 999;
     width: 100%;
     max-width: 970px;
     height: auto;
@@ -68,7 +80,9 @@
     min-height: 56px;
     background: white;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative;
+    z-index: 999; }
     .content .currency-stripe .currency {
       margin: 0 auto;
       display: flex;
@@ -85,6 +99,8 @@
         .content .currency-stripe .currency div span:last-child {
           font-weight: 400; }
   .content .fill-application {
+    position: relative;
+    z-index: 999;
     padding-top: 1px;
     width: 100%;
     max-width: 970px;

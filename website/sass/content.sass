@@ -3,8 +3,19 @@
 .content
   +size(100%, null, null, 700px)
   background: url('../img/11.jpg') no-repeat  center/cover
-
+  #particles-js
+    position: absolute
+    height: 700px
+    width: 100%
+    canvas
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
   .main-header
+    position: relative
+    z-index: 999
     +wrap()
 
     .main-nav
@@ -49,6 +60,8 @@
     background: white
     display: flex
     align-items: center
+    position: relative
+    z-index: 999
 
     .currency
       margin: 0 auto
@@ -68,6 +81,8 @@
 
 
   .fill-application
+    position: relative
+    z-index: 999
     padding-top: 1px
     +wrap()
     form
