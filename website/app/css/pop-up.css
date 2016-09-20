@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProBold";
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+.content .main-header .pop-up-container {
+  perspective: 1000px; }
+  .content .main-header .pop-up-container #entrance {
+    width: 100%;
+    max-width: 940px;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    transform-origin: 0% 0%; }
+    .content .main-header .pop-up-container #entrance.show {
+      display: block;
+      margin: 0 auto;
+      animation-name: spindown;
+      animation-duration: 400ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    .content .main-header .pop-up-container #entrance h1 {
+      position: relative;
+      color: #1c95e9;
+      font-family: "MyriadProRegular", sans-serif;
+      font-size: 30px;
+      background-color: #f1f1f1;
+      margin: 0;
+      text-align: center;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-weight: 400; }
+      .content .main-header .pop-up-container #entrance h1 .close {
+        cursor: pointer;
+        position: absolute;
+        top: 17px;
+        right: 40px;
+        width: 20px;
+        height: 20px;
+        transition: transform 50ms ease-in-out; }
+        .content .main-header .pop-up-container #entrance h1 .close:hover {
+          transform: scale(1.2);
+          transition: transform 50ms ease-in-out; }
+    .content .main-header .pop-up-container #entrance form .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 620px;
+      min-height: 180px; }
+      .content .main-header .pop-up-container #entrance form .container .email,
+      .content .main-header .pop-up-container #entrance form .container .password {
+        display: flex; }
+        .content .main-header .pop-up-container #entrance form .container .email span:first-child,
+        .content .main-header .pop-up-container #entrance form .container .password span:first-child {
+          margin-bottom: 15px; }
+        .content .main-header .pop-up-container #entrance form .container .email span,
+        .content .main-header .pop-up-container #entrance form .container .password span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          width: 100%;
+          max-width: 220px;
+          color: white;
+          background-color: #bbbbbb;
+          border-radius: 30px 0 0 30px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 30px;
+          font-weight: 300; }
+        .content .main-header .pop-up-container #entrance form .container .email input,
+        .content .main-header .pop-up-container #entrance form .container .password input {
+          border: 0;
+          border-radius: 0 30px 30px 0;
+          background-color: #f1f1f1;
+          width: 100%;
+          max-width: 400px;
+          height: 50px;
+          color: #767676;
+          text-align: center;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 300;
+          font-size: 30px; }
+          .content .main-header .pop-up-container #entrance form .container .email input:focus,
+          .content .main-header .pop-up-container #entrance form .container .password input:focus {
+            outline: none; }
+      .content .main-header .pop-up-container #entrance form .container .sign-in::after {
+        content: "";
+        display: block;
+        clear: both; }
+      .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn,
+      .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn {
+        cursor: pointer;
+        height: 50px;
+        color: white;
+        font-family: "MyriadProSemiBold", sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        border: 0;
+        border-radius: 30px; }
+        .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn:focus,
+        .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn:focus {
+          outline: none; }
+      .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn {
+        background-color: #bbf02c;
+        width: 100%;
+        max-width: 220px; }
+      .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn {
+        background-color: #1c95e9;
+        width: 100%;
+        max-width: 380px;
+        float: right; }
+
+@keyframes spindown {
+  0% {
+    opacity: .5;
+    transform: rotateX(-90deg);
+    transition: transform 500ms ease-out; }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transition: transform 500ms ease-out; } }
+
+@keyframes spinup {
+  0% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transition: transform 500ms ease-out; }
+  100% {
+    opacity: 1;
+    transform: rotateX(-90deg);
+    transition: transform 500ms ease-out; } }

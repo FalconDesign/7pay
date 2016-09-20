@@ -5,12 +5,28 @@ section.content
       .seven-pay 7
         span.pay PAY
       .nav-list
-          a(href="#") ГЛАВНАЯ
-          a(href="#") ТАРИФЫ
-          a(href="#") FAQ
+          a(href="#main") ГЛАВНАЯ
+          a(href="#rate") ТАРИФЫ
+          a(href="#faq") FAQ
           a(href="#contact") КОНТАКТЫ
-          a(href="#") ВХОД
-    
+          a(href="#entrance") ВХОД
+    .pop-up-container
+      #entrance
+        h1 ВХОД
+          img.close(src="img/delete.svg", alt="close")
+        form
+          .container
+            .email
+              span Email
+              input(type="email", placeholder="example@mail.com")
+            .password
+              span Пароль
+              input(type="password", placeholder="••••••••")
+            .sign-in
+              button.signin-btn(type="submit") Войти
+              button.reg-btn Зарегистрироваться
+              
+          
   .currency-stripe
     .currency
       div <span>BTC/PM:</span>&nbsp;696.23/640.06 <span>USD </span>    
