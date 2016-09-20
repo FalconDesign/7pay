@@ -1,0 +1,38 @@
+section.reserve
+  .wrap
+    .left
+      h1 РЕЗЕРВ
+      .curr-container
+        .curr.btc <span>BTC:</span>&nbsp;76.00
+        .curr.usd <span>USD:</span>&nbsp;80000.00
+        .curr.uah <span>UAH:</span>&nbsp;200000.00
+        .curr.eur <span>EUR:</span>&nbsp;10000.00
+        .curr.ltc <span>LTC:</span>&nbsp;150.00
+    .right
+      h1 
+        |Не достаточно резерва?</br>
+        |Узнайте о пополнении!
+        span
+          |Укажите Ваш email и нужную сумму,</br>
+          |и при пополнении резерва</br>
+          |Вы получите уведомление.
+      
+      #form-reserve
+        form
+          .mail
+            span.envelope
+              img(src="img/email.png")
+            input(type="email")
+          
+          .info-container
+            .info
+              div
+                ul.switcher 
+                  li.current-currency BTC
+                    span.arrow
+                  li USD
+                  li UAH
+                  li BTC
+                input(type="text")
+            button(type="submit") Узнать!
+              

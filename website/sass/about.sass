@@ -1,0 +1,26 @@
+@import variables.sass
+
+.about
+  min-height: 397px
+  background: url('../img/bg-about.jpg') no-repeat center/cover
+  background-attachment: fixed
+  padding-top: 1px
+  .wrap
+    margin: 44px auto 0 auto
+    +size(100%, null, 1172px, 283px)
+    display: flex
+    .icon
+      text-align: center
+      width: calc(100% / 3)
+      span
+        margin-top: 40px
+        display: block
+        color: black
+        font-family: $open-sans
+        font-size: 21px
+        font-weight: 300
+        letter-spacing: -1px
+
+    .icon:first-child
+      img
+        height: 156px

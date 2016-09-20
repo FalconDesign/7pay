@@ -1,0 +1,39 @@
+// Colors
+
+$main-green  :  #bbf02c
+$main-blue   :  #1c95e9
+
+
+// Font-family Myriad Pro
+
+@import "myriad-font.scss"
+
+$myriad           : "MyriadProRegular", sans-serif
+$myriad-bold      : "MyriadProBold", sans-serif
+$myriad-semibold  : "MyriadProSemiBold", sans-serif
+
+$open-sans        : "Open Sans", sans-serif
+
+// Mixins
+
+@mixin size ($width:"", $height:"", $m-width:"", $m-height:"")
+
+  width      : #{$width}
+  max-width  : #{$m-width}
+  height     : #{$height}
+  min-height : #{$m-height}
+
+
+// Clearfix mixin
+
+@mixin clearfix ()
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+@mixin wrap ()
+  +size(100%, auto, 970px)
+  margin: 0px auto
+  padding-left: 15px
+  padding-right: 15px

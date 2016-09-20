@@ -1,0 +1,221 @@
+@import variables.sass
+
+.content
+  +size(100%, null, null, 700px)
+  background: url('../img/11.jpg') no-repeat  center/cover
+
+  .main-header
+    +wrap()
+
+    .main-nav
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 115px
+
+      .seven-pay
+        margin-top: -24px
+        margin-left: 48px
+        font-size: 111px
+        color: $main-green
+        font-family: $myriad-bold
+        font-weight: 700
+        font-style: italic
+        letter-spacing: -0.075em
+        .pay
+          font-size: 78px
+          letter-spacing: initial
+          display: inline-block
+
+      .nav-list
+        margin: 0
+        display: flex
+        justify-content: space-between
+        width: 570px
+        a
+          color: white
+          font-family: $myriad
+          font-size: 30px
+          font-weight: 400
+          &:hover
+            color: $main-blue
+        a:last-child
+          font-family: $myriad-semibold
+          color: $main-blue
+          font-weight: 600
+
+  .currency-stripe
+    min-height: 56px
+    background: white
+    display: flex
+    align-items: center
+
+    .currency
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+      width: 100%
+      max-width: 1035px
+      div
+        font-family: $open-sans
+        font-size: 28px
+        font-weight: 300
+        color: #454545
+        span:first-child
+          font-family: $myriad-bold
+        span:last-child
+          font-weight: 400
+
+
+  .fill-application
+    padding-top: 1px
+    +wrap()
+    form
+      margin-top: 32px
+      .switch-container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+        .left-input,
+        .right-input
+          .heading
+            margin-left: 24px
+            color: white
+            font-family: $open-sans
+            font-size: 36px
+            font-weight: 300
+          width: 100%
+          max-width: 430px
+          div
+            display: flex
+            .switcher
+              position: absolute
+              padding: 0
+              margin: 0
+              cursor: pointer
+              +size(100%, auto, 140px, null)
+              perspective: 1000
+              &.open
+                li:nth-child(1n+2)
+                  display: flex
+                  opacity: 0
+                  @for $i from 1 through 4
+                    &:nth-child(#{$i})
+                      animation:
+                        name: menu
+                        duration: 300ms
+                        delay: (150ms * $i) - 300ms
+                        timing-function: ease-in-out
+                        fill-mode: forwards
+
+
+
+              li
+                margin-bottom: 2px
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 67px
+                width: 140px
+                color: white
+                font-family: $myriad
+                font-size: 40px
+                font-weight: 400
+                .arrow
+                  margin-left: 18px
+                  display: inline-block
+                  width: 0
+                  height: 0
+                  border-top: 11px solid white
+                  border-left: 6.5px solid transparent
+                  border-right: 6.5px solid transparent
+              li:first-child
+                background-color: $main-green
+                border-radius: 30px 0px 0px 30px
+              li:nth-child(1n+2)
+                +size(100%, 67px, 140px, null)
+                display: none
+                background-color: white
+                color: #454545
+                font-family: $myriad
+                font-size: 40px
+                font-weight: 400
+                border-radius: 30px
+                &:hover
+                  background-color: $main-green
+
+
+            input[type="text"]
+              margin-left: 140px
+              +size(100%, 67px, 290px, null)
+              border-radius: 0px 30px 30px 0px
+              border: none
+              text-align: center
+              color: #565656
+              font-family: $open-sans
+              font-size: 38px
+              font-weight: 300
+              &:focus
+                outline: none
+
+      .add-info
+        margin: 29px auto 0 auto
+        text-align: center
+        +size(100%, null, 620px, null)
+        .heading
+          color: white
+          font-family: $open-sans
+          font-size: 36px
+          font-weight: 300
+        .mail,
+        .phone-number
+          margin-bottom: 21px
+          display: flex
+          .envelope,
+          .phone
+            display: flex
+            justify-content: center
+            align-items: center
+            +size(100%, 67px, 140px, null)
+            background-color: $main-green
+            border-radius: 30px 0 0 30px
+            text-align: center
+
+          input[type="email"],
+          input[type="text"]
+            text-align: center
+            +size(100%, 67px, 480px, null)
+            border: none
+            border-radius: 0 30px 30px 0
+            color: #565656
+            font-family: $open-sans
+            font-size: 38px
+            font-weight: 300
+            &:focus
+              outline: none
+
+        button[type="submit"]
+          border: none
+          +size(100%, 100px, 620px, null)
+          background-color: #1c95e9
+          border-radius: 40px
+          cursor: pointer
+          color: white
+          font-family: $myriad-bold
+          font-size: 43px
+          font-weight: 700
+          &:focus
+            outline: none
+          &:active
+            background-color: fade-out($main-green, 0.4)
+
+// Key frames
+
+@keyframes menu
+  0%
+    opacity: 0
+    transform: rotateY(-90deg) translateY(30px)
+  100%
+    opacity: 1
+    transform: rotateY(0deg) translateY(0px)

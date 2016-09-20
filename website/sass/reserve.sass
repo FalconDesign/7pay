@@ -1,0 +1,172 @@
+@import variables.sass
+
+.reserve
+  background-color: #f1f1f1
+  .wrap
+    +wrap()
+    display: flex
+    flex-wrap: wrap
+    padding-top: 58px
+    padding-bottom: 85px
+    .gg
+    .left,
+    .right
+      width: 50%
+
+    .left
+      text-align: center
+      display: flex
+      flex-direction: column
+      h1
+        margin: 0 0 27px 0
+        color: $main-blue
+        font-family: $open-sans
+        font-size: 58px
+        font-weight: 300
+      .curr-container
+        .curr
+          color: #767676
+          font-size: 46px
+          font-family: $open-sans
+          font-weight: 300
+          letter-spacing: -2px
+          span
+            font-family: $myriad
+            letter-spacing: normal
+
+
+    .right
+      h1
+        margin-top: 5px
+        text-align: center
+        font-family: $myriad
+        font-size: 36px
+        color: #454545
+
+        span
+          display: inline-block
+          margin-top: 41px
+          font-family: $open-sans
+          font-size: 28px
+          font-weight: 300
+          letter-spacing: -2px
+
+      #form-reserve
+        form
+          .mail
+            margin-top: 20px
+            display: flex
+            .envelope
+              display: flex
+              justify-content: center
+              align-items: center
+              +size(100%, 56px, 80px, null)
+              background-color: $main-blue
+              border-radius: 30px 0 0 30px
+              text-align: center
+              img
+                width: 43px
+                height: 30px
+
+            input[type="email"]
+              text-align: center
+              +size(100%, 56px, 380px, null)
+              border: none
+              border-radius: 0 30px 30px 0
+              color: #565656
+              font-family: $open-sans
+              font-size: 38px
+              font-weight: 300
+              &:focus
+                outline: none
+
+          .info-container
+            display: flex
+            align-items: flex-end
+            .info
+              margin-top: 20px
+              div
+                display: flex
+                .switcher
+                  position: absolute
+                  padding: 0
+                  margin: 0
+                  cursor: pointer
+                  +size(100%, null, 80px, auto)
+                  perspective: 600
+                  &.open
+                    li:nth-child(1n+2)
+                      display: flex
+                      opacity: 0
+                      @for $i from 1 through 4
+                        &:nth-child(#{$i})
+                          animation:
+                            name: menu
+                            duration: 300ms
+                            delay: (150ms * $i) - 300ms
+                            timing-function: ease-in-out
+                            fill-mode: forwards
+                  li
+                    margin-bottom: 2px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 56px
+                    width: 80px
+                    color: white
+                    font-family: $myriad-semibold
+                    font-size: 24px
+                    font-style: italic
+                    .arrow
+                      margin-left: 12px
+                      margin-top: 2px
+                      display: inline-block
+                      width: 0
+                      height: 0
+                      border-top: 8px solid white
+                      border-left: 5px solid transparent
+                      border-right: 5px solid transparent
+                  li:first-child
+                    background-color: $main-blue
+                    border-radius: 30px 0px 0px 30px
+                  li:nth-child(1n+2)
+                    +size(100%, 67px, 140px, null)
+                    display: none
+                    background-color: white
+                    color: #454545
+                    font-family: $myriad-semibold
+                    font-size: 24px
+                    border-radius: 30px
+                    font-style: italic
+                    &:hover
+                      background-color: $main-blue
+                      color: white
+
+                input[type="text"]
+                  margin-left: 80px
+                  +size(100%, 56px, 140px, null)
+                  border-radius: 0px 30px 30px 0px
+                  border: none
+                  text-align: center
+                  color: #565656
+                  font-family: $myriad
+                  font-size: 38px
+                  font-weight: 300
+                  &:focus
+                    outline: none
+
+            button
+              margin-left: 20px
+              width: 220px
+              height: 56px
+              background-color: $main-blue
+              border-radius: 30px
+              border: 0
+              cursor: pointer
+              color: white
+              font-family: $myriad-semibold
+              font-size: 24px
+              font-weight: 300
+              font-style: italic
+              &:focus
+                outline: none

@@ -1,0 +1,24 @@
+@import variables.sass
+
+.chart
+  height: 535px
+  background-color: #f1f1f1
+  position: relative
+  .btc-chart
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    +size(100%, 450px, 931px, null)
+    opacity: 0.54
+    background-image: linear-gradient(to top, #1c95e9 0%, #bbf02c 100%)
+    border-radius: 30px
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      color: white
+      font-family: $myriad
+      font-size: 100px
+      font-weight: 300

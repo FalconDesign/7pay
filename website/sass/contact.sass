@@ -1,0 +1,49 @@
+@import variables.sass
+
+.contact
+  min-height: 397px
+  background: url('../img/bg-phone.jpg') no-repeat center/cover
+  background-attachment: fixed
+
+  .wrap
+    +wrap()
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    h1
+      margin: 22px 0 24px 0
+      text-align: center
+      color: #1c95e9
+      font-family: $open-sans
+      font-size: 84px
+      font-weight: 300
+      text-transform: uppercase
+
+    .img-container
+      +size(100%, null, 780px, 115px)
+      display: flex
+      justify-content: space-between
+      span > span
+        display: block
+        text-align: center
+        color: #767676
+        font-family: $open-sans
+        font-size: 19px
+        font-weight: 300
+    .email
+      margin-top: 30px
+      +size(100%, null, 695px, 42px)
+      display: flex
+      justify-content: space-between
+
+      .mail,
+      .skype
+        color: #454545
+        font-family: $open-sans
+        font-size: 36px
+        font-weight: 300
+        span
+          color: #1c95e9
+          font-family: $myriad
+          font-size: 44px
+          font-weight: 400

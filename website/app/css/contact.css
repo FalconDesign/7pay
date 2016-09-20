@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProBold";
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+.contact {
+  min-height: 397px;
+  background: url("../img/bg-phone.jpg") no-repeat center/cover;
+  background-attachment: fixed; }
+  .contact .wrap {
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .contact .wrap h1 {
+      margin: 22px 0 24px 0;
+      text-align: center;
+      color: #1c95e9;
+      font-family: "Open Sans", sans-serif;
+      font-size: 84px;
+      font-weight: 300;
+      text-transform: uppercase; }
+    .contact .wrap .img-container {
+      width: 100%;
+      max-width: 780px;
+      min-height: 115px;
+      display: flex;
+      justify-content: space-between; }
+      .contact .wrap .img-container span > span {
+        display: block;
+        text-align: center;
+        color: #767676;
+        font-family: "Open Sans", sans-serif;
+        font-size: 19px;
+        font-weight: 300; }
+    .contact .wrap .email {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 695px;
+      min-height: 42px;
+      display: flex;
+      justify-content: space-between; }
+      .contact .wrap .email .mail,
+      .contact .wrap .email .skype {
+        color: #454545;
+        font-family: "Open Sans", sans-serif;
+        font-size: 36px;
+        font-weight: 300; }
+        .contact .wrap .email .mail span,
+        .contact .wrap .email .skype span {
+          color: #1c95e9;
+          font-family: "MyriadProRegular", sans-serif;
+          font-size: 44px;
+          font-weight: 400; }

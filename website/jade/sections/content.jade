@@ -1,0 +1,61 @@
+section.content
+  header.main-header
+    nav.main-nav
+      .seven-pay 7
+        span.pay PAY
+      .nav-list
+          a(href="#") ГЛАВНАЯ
+          a(href="#") ТАРИФЫ
+          a(href="#") FAQ
+          a(href="#contact") КОНТАКТЫ
+          a(href="#") ВХОД
+    
+  .currency-stripe
+    .currency
+      div <span>BTC/PM:</span>&nbsp;696.23/640.06 <span>USD </span>    
+      div <span>LTC/PM:</span>&nbsp;4.19/3.83 <span>USD<span/>  
+      div <span>BTC/LTC:</span>&nbsp;173.05/156.16 <span>LTC</span>
+
+  
+  .fill-application
+    form
+      .switch-container
+        .left-input
+          span.heading Вы отдаете
+          div
+            ul.switcher 
+              li.current-currency USD
+                span.arrow
+              li USD
+              li UAH
+              li BTC
+            input(type="text", placeholder="00.00")
+              
+        .right-input
+          span.heading Вы получаете
+          div
+            ul.switcher 
+              li.current-currency BTC
+                span.arrow
+              li USD
+              li UAH
+              li BTC
+            input(type="text", placeholder="00.00")
+              
+      .add-info
+        span.heading Внесите свои данные:
+        .mail
+          span.envelope
+            img(src="img/email.png")
+          input(type="email")
+          
+          
+        .phone-number
+          span.phone
+            img(src="img/phone.png")
+          input(type="text")
+            
+        button(type="submit", ) Оформить заявку!
+          
+
+        

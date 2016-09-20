@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProBold";
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+  src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+  src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"), url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+.content {
+  width: 100%;
+  min-height: 700px;
+  background: url("../img/11.jpg") no-repeat center/cover; }
+  .content .main-header {
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .content .main-header .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 115px; }
+      .content .main-header .main-nav .seven-pay {
+        margin-top: -24px;
+        margin-left: 48px;
+        font-size: 111px;
+        color: #bbf02c;
+        font-family: "MyriadProBold", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: -0.075em; }
+        .content .main-header .main-nav .seven-pay .pay {
+          font-size: 78px;
+          letter-spacing: initial;
+          display: inline-block; }
+      .content .main-header .main-nav .nav-list {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 570px; }
+        .content .main-header .main-nav .nav-list a {
+          color: white;
+          font-family: "MyriadProRegular", sans-serif;
+          font-size: 30px;
+          font-weight: 400; }
+          .content .main-header .main-nav .nav-list a:hover {
+            color: #1c95e9; }
+        .content .main-header .main-nav .nav-list a:last-child {
+          font-family: "MyriadProSemiBold", sans-serif;
+          color: #1c95e9;
+          font-weight: 600; }
+  .content .currency-stripe {
+    min-height: 56px;
+    background: white;
+    display: flex;
+    align-items: center; }
+    .content .currency-stripe .currency {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1035px; }
+      .content .currency-stripe .currency div {
+        font-family: "Open Sans", sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+        color: #454545; }
+        .content .currency-stripe .currency div span:first-child {
+          font-family: "MyriadProBold", sans-serif; }
+        .content .currency-stripe .currency div span:last-child {
+          font-weight: 400; }
+  .content .fill-application {
+    padding-top: 1px;
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .content .fill-application form {
+      margin-top: 32px; }
+      .content .fill-application form .switch-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .content .fill-application form .switch-container .left-input,
+        .content .fill-application form .switch-container .right-input {
+          width: 100%;
+          max-width: 430px; }
+          .content .fill-application form .switch-container .left-input .heading,
+          .content .fill-application form .switch-container .right-input .heading {
+            margin-left: 24px;
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 36px;
+            font-weight: 300; }
+          .content .fill-application form .switch-container .left-input div,
+          .content .fill-application form .switch-container .right-input div {
+            display: flex; }
+            .content .fill-application form .switch-container .left-input div .switcher,
+            .content .fill-application form .switch-container .right-input div .switcher {
+              position: absolute;
+              padding: 0;
+              margin: 0;
+              cursor: pointer;
+              width: 100%;
+              max-width: 140px;
+              height: auto;
+              perspective: 1000; }
+              .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2),
+              .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2) {
+                display: flex;
+                opacity: 0; }
+                .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2):nth-child(1),
+                .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2):nth-child(1) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: -150ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2):nth-child(2),
+                .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2):nth-child(2) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 0ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2):nth-child(3),
+                .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2):nth-child(3) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 150ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2):nth-child(4),
+                .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2):nth-child(4) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 300ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+              .content .fill-application form .switch-container .left-input div .switcher li,
+              .content .fill-application form .switch-container .right-input div .switcher li {
+                margin-bottom: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 67px;
+                width: 140px;
+                color: white;
+                font-family: "MyriadProRegular", sans-serif;
+                font-size: 40px;
+                font-weight: 400; }
+                .content .fill-application form .switch-container .left-input div .switcher li .arrow,
+                .content .fill-application form .switch-container .right-input div .switcher li .arrow {
+                  margin-left: 18px;
+                  display: inline-block;
+                  width: 0;
+                  height: 0;
+                  border-top: 11px solid white;
+                  border-left: 6.5px solid transparent;
+                  border-right: 6.5px solid transparent; }
+              .content .fill-application form .switch-container .left-input div .switcher li:first-child,
+              .content .fill-application form .switch-container .right-input div .switcher li:first-child {
+                background-color: #bbf02c;
+                border-radius: 30px 0px 0px 30px; }
+              .content .fill-application form .switch-container .left-input div .switcher li:nth-child(1n+2),
+              .content .fill-application form .switch-container .right-input div .switcher li:nth-child(1n+2) {
+                width: 100%;
+                max-width: 140px;
+                height: 67px;
+                display: none;
+                background-color: white;
+                color: #454545;
+                font-family: "MyriadProRegular", sans-serif;
+                font-size: 40px;
+                font-weight: 400;
+                border-radius: 30px; }
+                .content .fill-application form .switch-container .left-input div .switcher li:nth-child(1n+2):hover,
+                .content .fill-application form .switch-container .right-input div .switcher li:nth-child(1n+2):hover {
+                  background-color: #bbf02c; }
+            .content .fill-application form .switch-container .left-input div input[type="text"],
+            .content .fill-application form .switch-container .right-input div input[type="text"] {
+              margin-left: 140px;
+              width: 100%;
+              max-width: 290px;
+              height: 67px;
+              border-radius: 0px 30px 30px 0px;
+              border: none;
+              text-align: center;
+              color: #565656;
+              font-family: "Open Sans", sans-serif;
+              font-size: 38px;
+              font-weight: 300; }
+              .content .fill-application form .switch-container .left-input div input[type="text"]:focus,
+              .content .fill-application form .switch-container .right-input div input[type="text"]:focus {
+                outline: none; }
+      .content .fill-application form .add-info {
+        margin: 29px auto 0 auto;
+        text-align: center;
+        width: 100%;
+        max-width: 620px; }
+        .content .fill-application form .add-info .heading {
+          color: white;
+          font-family: "Open Sans", sans-serif;
+          font-size: 36px;
+          font-weight: 300; }
+        .content .fill-application form .add-info .mail,
+        .content .fill-application form .add-info .phone-number {
+          margin-bottom: 21px;
+          display: flex; }
+          .content .fill-application form .add-info .mail .envelope,
+          .content .fill-application form .add-info .mail .phone,
+          .content .fill-application form .add-info .phone-number .envelope,
+          .content .fill-application form .add-info .phone-number .phone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 140px;
+            height: 67px;
+            background-color: #bbf02c;
+            border-radius: 30px 0 0 30px;
+            text-align: center; }
+          .content .fill-application form .add-info .mail input[type="email"],
+          .content .fill-application form .add-info .mail input[type="text"],
+          .content .fill-application form .add-info .phone-number input[type="email"],
+          .content .fill-application form .add-info .phone-number input[type="text"] {
+            text-align: center;
+            width: 100%;
+            max-width: 480px;
+            height: 67px;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            color: #565656;
+            font-family: "Open Sans", sans-serif;
+            font-size: 38px;
+            font-weight: 300; }
+            .content .fill-application form .add-info .mail input[type="email"]:focus,
+            .content .fill-application form .add-info .mail input[type="text"]:focus,
+            .content .fill-application form .add-info .phone-number input[type="email"]:focus,
+            .content .fill-application form .add-info .phone-number input[type="text"]:focus {
+              outline: none; }
+        .content .fill-application form .add-info button[type="submit"] {
+          border: none;
+          width: 100%;
+          max-width: 620px;
+          height: 100px;
+          background-color: #1c95e9;
+          border-radius: 40px;
+          cursor: pointer;
+          color: white;
+          font-family: "MyriadProBold", sans-serif;
+          font-size: 43px;
+          font-weight: 700; }
+          .content .fill-application form .add-info button[type="submit"]:focus {
+            outline: none; }
+          .content .fill-application form .add-info button[type="submit"]:active {
+            background-color: rgba(187, 240, 44, 0.6); }
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px); } }
