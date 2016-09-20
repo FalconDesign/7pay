@@ -1,8 +1,15 @@
 @import variables.sass
 
 .reserve
+  position: relative
   background-color: #f1f1f1
+  #particles-js2
+    position: absolute
+    width: 100%
+    height: 100%
   .wrap
+    position: relative
+    z-index: 999
     +wrap()
     display: flex
     flex-wrap: wrap
