@@ -43,36 +43,31 @@
 .content {
   width: 100%;
   min-height: 700px;
-  background: url("../img/11.jpg") no-repeat center/cover; }
-  .content #particles-js {
-    position: absolute;
-    height: 700px;
-    width: 100%; }
-    .content #particles-js canvas {
+  background: url("../img/11.jpg") no-repeat center/cover;
+  background-attachment: fixed; }
+  .content .main-header-fixed {
+    position: fixed !important;
+    display: none;
+    z-index: 1001 !important; }
+    .content .main-header-fixed .shadow {
+      display: none;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-  .content .main-header {
-    position: relative;
-    z-index: 999; }
-    .content .main-header.dark {
-      background-color: #343434;
-      position: fixed;
-      z-index: 1000;
-      width: 100%; }
-      .content .main-header.dark .pop-up-container {
-        display: block;
-        -webkit-animation-name: shadow;
-                animation-name: shadow;
-        -webkit-animation-duration: 300ms;
-                animation-duration: 300ms;
-        -webkit-animation-timing-function: ease-in-out;
-                animation-timing-function: ease-in-out;
-        -webkit-animation-fill-mode: forwards;
-                animation-fill-mode: forwards; }
-    .content .main-header .main-nav {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: #343434; }
+    .content .main-header-fixed .main-nav .seven-pay {
+      color: #bbf02c !important; }
+    .content .main-header-fixed .pop-up-container {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5); }
+  .content .main-header,
+  .content .main-header-fixed {
+    position: absolute;
+    z-index: 1000;
+    width: 100%; }
+    .content .main-header .main-nav,
+    .content .main-header-fixed .main-nav {
       width: 100%;
       max-width: 970px;
       height: auto;
@@ -92,20 +87,23 @@
           -ms-flex-align: center;
               align-items: center;
       height: 115px; }
-      .content .main-header .main-nav .seven-pay {
+      .content .main-header .main-nav .seven-pay,
+      .content .main-header-fixed .main-nav .seven-pay {
         margin-top: -24px;
         margin-left: 48px;
         font-size: 111px;
-        color: #bbf02c;
+        color: white;
         font-family: "MyriadProBold", sans-serif;
         font-weight: 700;
         font-style: italic;
         letter-spacing: -0.075em; }
-        .content .main-header .main-nav .seven-pay .pay {
+        .content .main-header .main-nav .seven-pay .pay,
+        .content .main-header-fixed .main-nav .seven-pay .pay {
           font-size: 78px;
           letter-spacing: initial;
           display: inline-block; }
-      .content .main-header .main-nav .nav-list {
+      .content .main-header .main-nav .nav-list,
+      .content .main-header-fixed .main-nav .nav-list {
         margin: 0;
         display: -webkit-box;
         display: -webkit-flex;
@@ -116,24 +114,27 @@
             -ms-flex-pack: justify;
                 justify-content: space-between;
         width: 570px; }
-        .content .main-header .main-nav .nav-list a {
+        .content .main-header .main-nav .nav-list a,
+        .content .main-header-fixed .main-nav .nav-list a {
           color: white;
           font-family: "MyriadProRegular", sans-serif;
           font-size: 30px;
           font-weight: 400; }
-          .content .main-header .main-nav .nav-list a:hover {
+          .content .main-header .main-nav .nav-list a:hover,
+          .content .main-header-fixed .main-nav .nav-list a:hover {
             color: #1c95e9; }
-        .content .main-header .main-nav .nav-list a:last-child {
+        .content .main-header .main-nav .nav-list a:last-child,
+        .content .main-header-fixed .main-nav .nav-list a:last-child {
           font-family: "MyriadProSemiBold", sans-serif;
           color: #1c95e9;
           font-weight: 600; }
-    .content .main-header .pop-up-container {
+    .content .main-header .pop-up-container,
+    .content .main-header-fixed .pop-up-container {
       position: fixed;
       width: 100%;
       height: 100%;
       display: none; }
   .content .currency-stripe {
-    background: white;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -143,9 +144,13 @@
         -ms-flex-align: center;
             align-items: center;
     position: relative;
-    z-index: 999; }
-    .content .currency-stripe.move-down {
-      padding-top: 115px; }
+    z-index: 999;
+    padding-top: 115px; }
+    .content .currency-stripe .wrap {
+      width: 100%;
+      background-color: white; }
+      .content .currency-stripe .wrap .currency {
+        margin: 0 auto; }
     .content .currency-stripe .currency {
       min-height: 56px;
       margin: 0 auto;
@@ -222,8 +227,8 @@
               width: 100%;
               max-width: 140px;
               height: auto;
-              -webkit-perspective: 1000;
-                      perspective: 1000; }
+              -webkit-perspective: 1000px;
+                      perspective: 1000px; }
               .content .fill-application form .switch-container .left-input div .switcher.open li:nth-child(1n+2),
               .content .fill-application form .switch-container .right-input div .switcher.open li:nth-child(1n+2) {
                 display: -webkit-box;
@@ -445,18 +450,6 @@
     -webkit-transform: rotateY(0deg) translateY(0px);
             transform: rotateY(0deg) translateY(0px); } }
 
-@-webkit-keyframes shadow {
-  0% {
-    background-color: transparent; }
-  100% {
-    background-color: rgba(0, 0, 0, 0.5); } }
-
-@keyframes shadow {
-  0% {
-    background-color: transparent; }
-  100% {
-    background-color: rgba(0, 0, 0, 0.5); } }
-
 @font-face {
   font-family: "MyriadProRegular";
   src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
@@ -480,8 +473,7 @@
 
 .contact {
   min-height: 397px;
-  background: url("../img/bg-phone.jpg") no-repeat center/cover;
-  background-attachment: fixed; }
+  background: url("../img/bg-phone.jpg") no-repeat center/cover; }
   .contact .wrap {
     width: 100%;
     max-width: 970px;
@@ -680,10 +672,6 @@
 .reserve {
   position: relative;
   background-color: #f1f1f1; }
-  .reserve #particles-js2 {
-    position: absolute;
-    width: 100%;
-    height: 100%; }
   .reserve .wrap {
     position: relative;
     z-index: 999;
@@ -1017,215 +1005,312 @@
   font-style: normal;
   font-weight: normal; }
 
-.content .main-header .pop-up-container {
-  -webkit-perspective: 1000px;
-          perspective: 1000px; }
-  .content .main-header .pop-up-container #entrance {
-    width: 100%;
-    max-width: 940px;
-    height: 450px;
-    background-color: white;
+.content .main-header-fixed .pop-up-container #entrance {
+  display: none;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 940px;
+  height: 500px;
+  background-color: white; }
+  .content .main-header-fixed .pop-up-container #entrance h1 {
     position: relative;
-    -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-            transform-origin: 0% 0%; }
-    .content .main-header .pop-up-container #entrance.show {
-      display: block;
-      margin: 0 auto;
-      -webkit-animation-name: spindown;
-              animation-name: spindown;
-      -webkit-animation-duration: 400ms;
-              animation-duration: 400ms;
-      -webkit-animation-timing-function: ease-in-out;
-              animation-timing-function: ease-in-out;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
-    .content .main-header .pop-up-container #entrance h1 {
-      position: relative;
-      color: #1c95e9;
-      font-family: "MyriadProRegular", sans-serif;
-      font-size: 30px;
-      background-color: #f1f1f1;
-      margin: 0;
-      text-align: center;
-      padding-top: 9px;
-      padding-bottom: 9px;
-      font-weight: 400; }
-      .content .main-header .pop-up-container #entrance h1 .close {
-        cursor: pointer;
-        position: absolute;
-        top: 17px;
-        right: 40px;
-        width: 20px;
-        height: 20px;
+    color: #1c95e9;
+    font-family: "MyriadProRegular", sans-serif;
+    font-size: 30px;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #entrance h1 .close {
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      -webkit-transition: -webkit-transform 50ms ease-in-out;
+      transition: -webkit-transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+      .content .main-header-fixed .pop-up-container #entrance h1 .close:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
         -webkit-transition: -webkit-transform 50ms ease-in-out;
         transition: -webkit-transform 50ms ease-in-out;
         transition: transform 50ms ease-in-out;
         transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
-        .content .main-header .pop-up-container #entrance h1 .close:hover {
-          -webkit-transform: scale(1.2);
-              -ms-transform: scale(1.2);
-                  transform: scale(1.2);
-          -webkit-transition: -webkit-transform 50ms ease-in-out;
-          transition: -webkit-transform 50ms ease-in-out;
-          transition: transform 50ms ease-in-out;
-          transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
-    .content .main-header .pop-up-container #entrance form .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      width: 100%;
-      max-width: 620px;
-      min-height: 180px; }
-      .content .main-header .pop-up-container #entrance form .container .email,
-      .content .main-header .pop-up-container #entrance form .container .password {
+  .content .main-header-fixed .pop-up-container #entrance form .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 620px;
+    min-height: 180px; }
+    .content .main-header-fixed .pop-up-container #entrance form .container .email,
+    .content .main-header-fixed .pop-up-container #entrance form .container .password {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .content .main-header-fixed .pop-up-container #entrance form .container .email span:first-child,
+      .content .main-header-fixed .pop-up-container #entrance form .container .password span:first-child {
+        margin-bottom: 15px; }
+      .content .main-header-fixed .pop-up-container #entrance form .container .email span,
+      .content .main-header-fixed .pop-up-container #entrance form .container .password span {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex; }
-        .content .main-header .pop-up-container #entrance form .container .email span:first-child,
-        .content .main-header .pop-up-container #entrance form .container .password span:first-child {
-          margin-bottom: 15px; }
-        .content .main-header .pop-up-container #entrance form .container .email span,
-        .content .main-header .pop-up-container #entrance form .container .password span {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          height: 50px;
-          width: 100%;
-          max-width: 220px;
-          color: white;
-          background-color: #bbbbbb;
-          -webkit-border-radius: 30px 0 0 30px;
-                  border-radius: 30px 0 0 30px;
-          font-family: "Open Sans", sans-serif;
-          font-size: 30px;
-          font-weight: 300; }
-        .content .main-header .pop-up-container #entrance form .container .email input,
-        .content .main-header .pop-up-container #entrance form .container .password input {
-          border: 0;
-          -webkit-border-radius: 0 30px 30px 0;
-                  border-radius: 0 30px 30px 0;
-          background-color: #f1f1f1;
-          width: 100%;
-          max-width: 400px;
-          height: 50px;
-          color: #767676;
-          text-align: center;
-          font-family: "Open Sans", sans-serif;
-          font-weight: 300;
-          font-size: 30px; }
-          .content .main-header .pop-up-container #entrance form .container .email input:focus,
-          .content .main-header .pop-up-container #entrance form .container .password input:focus {
-            outline: none; }
-      .content .main-header .pop-up-container #entrance form .container .sign-in::after {
-        content: "";
-        display: block;
-        clear: both; }
-      .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn,
-      .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn {
-        cursor: pointer;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         height: 50px;
+        width: 100%;
+        max-width: 220px;
         color: white;
-        font-family: "MyriadProSemiBold", sans-serif;
+        background-color: #bbbbbb;
+        -webkit-border-radius: 30px 0 0 30px;
+                border-radius: 30px 0 0 30px;
+        font-family: "Open Sans", sans-serif;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 300; }
+      .content .main-header-fixed .pop-up-container #entrance form .container .email input,
+      .content .main-header-fixed .pop-up-container #entrance form .container .password input {
         border: 0;
-        -webkit-border-radius: 30px;
-                border-radius: 30px; }
-        .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn:focus,
-        .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn:focus {
+        -webkit-border-radius: 0 30px 30px 0;
+                border-radius: 0 30px 30px 0;
+        background-color: #f1f1f1;
+        width: 100%;
+        max-width: 400px;
+        height: 50px;
+        color: #767676;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 30px; }
+        .content .main-header-fixed .pop-up-container #entrance form .container .email input:focus,
+        .content .main-header-fixed .pop-up-container #entrance form .container .password input:focus {
           outline: none; }
-      .content .main-header .pop-up-container #entrance form .container .sign-in .signin-btn {
-        background-color: #bbf02c;
-        width: 100%;
-        max-width: 220px; }
-      .content .main-header .pop-up-container #entrance form .container .sign-in .reg-btn {
-        background-color: #1c95e9;
-        width: 100%;
-        max-width: 380px;
-        float: right; }
+    .content .main-header-fixed .pop-up-container #entrance form .container .sign-in::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .signin-btn,
+    .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .reg-btn {
+      cursor: pointer;
+      height: 50px;
+      color: white;
+      font-family: "MyriadProSemiBold", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      border: 0;
+      -webkit-border-radius: 30px;
+              border-radius: 30px; }
+      .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .signin-btn:focus,
+      .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .reg-btn:focus {
+        outline: none; }
+    .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .signin-btn {
+      background-color: #bbf02c;
+      width: 100%;
+      max-width: 220px; }
+    .content .main-header-fixed .pop-up-container #entrance form .container .sign-in .reg-btn {
+      background-color: #1c95e9;
+      width: 100%;
+      max-width: 380px;
+      float: right; }
 
-@-webkit-keyframes spindown {
-  0% {
-    opacity: .5;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; } }
+.content .main-header-fixed .pop-up-container #faq {
+  display: none;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 940px;
+  min-height: 500px;
+  background-color: white;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%; }
+  .content .main-header-fixed .pop-up-container #faq h1 {
+    position: relative;
+    color: #1c95e9;
+    font-family: "MyriadProRegular", sans-serif;
+    font-size: 30px;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #faq h1 .close {
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      -webkit-transition: -webkit-transform 50ms ease-in-out;
+      transition: -webkit-transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+      .content .main-header-fixed .pop-up-container #faq h1 .close:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+        -webkit-transition: -webkit-transform 50ms ease-in-out;
+        transition: -webkit-transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+  .content .main-header-fixed .pop-up-container #faq .info {
+    height: 100px;
+    padding: 20px;
+    color: #767676;
+    font-size: 18px;
+    font-family: "MyriadProRegular", sans-serif;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #faq .info span {
+      font-weight: 600; }
 
-@keyframes spindown {
-  0% {
-    opacity: .5;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; } }
+.content .main-header-fixed .pop-up-container #tarify {
+  display: none;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 940px;
+  min-height: 500px;
+  background-color: white;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%; }
+  .content .main-header-fixed .pop-up-container #tarify h1 {
+    position: relative;
+    color: #1c95e9;
+    font-family: "MyriadProRegular", sans-serif;
+    font-size: 30px;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #tarify h1 .close {
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      -webkit-transition: -webkit-transform 50ms ease-in-out;
+      transition: -webkit-transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+      .content .main-header-fixed .pop-up-container #tarify h1 .close:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+        -webkit-transition: -webkit-transform 50ms ease-in-out;
+        transition: -webkit-transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+  .content .main-header-fixed .pop-up-container #tarify .info {
+    height: 100px;
+    padding: 20px;
+    color: #767676;
+    font-size: 18px;
+    font-family: "MyriadProRegular", sans-serif;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #tarify .info h5 {
+      margin: 0 0 25px 0;
+      font-family: "MyriadProRegular", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center; }
+    .content .main-header-fixed .pop-up-container #tarify .info span {
+      font-weight: 600; }
 
-@-webkit-keyframes spinup {
-  0% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; } }
-
-@keyframes spinup {
-  0% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out; } }
+.content .main-header-fixed .pop-up-container #confidentiality {
+  display: none;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 940px;
+  min-height: 500px;
+  background-color: white;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%; }
+  .content .main-header-fixed .pop-up-container #confidentiality h1 {
+    position: relative;
+    color: #1c95e9;
+    font-family: "MyriadProRegular", sans-serif;
+    font-size: 30px;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 400;
+    text-transform: uppercase; }
+    .content .main-header-fixed .pop-up-container #confidentiality h1 .close {
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      -webkit-transition: -webkit-transform 50ms ease-in-out;
+      transition: -webkit-transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out;
+      transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+      .content .main-header-fixed .pop-up-container #confidentiality h1 .close:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+        -webkit-transition: -webkit-transform 50ms ease-in-out;
+        transition: -webkit-transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out;
+        transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out; }
+  .content .main-header-fixed .pop-up-container #confidentiality .info {
+    height: 100px;
+    padding: 20px;
+    color: #767676;
+    font-size: 18px;
+    font-family: "MyriadProRegular", sans-serif;
+    font-weight: 400; }
+    .content .main-header-fixed .pop-up-container #confidentiality .info h5 {
+      margin: 0 0 25px 0;
+      font-family: "MyriadProRegular", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center; }
+    .content .main-header-fixed .pop-up-container #confidentiality .info span {
+      font-weight: 600; }

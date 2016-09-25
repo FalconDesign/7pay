@@ -21,8 +21,7 @@
 
 .contact {
   min-height: 397px;
-  background: url("../img/bg-phone.jpg") no-repeat center/cover;
-  background-attachment: fixed; }
+  background: url("../img/bg-phone.jpg") no-repeat center/cover; }
   .contact .wrap {
     width: 100%;
     max-width: 970px;

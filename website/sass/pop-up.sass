@@ -1,24 +1,19 @@
 @import variables.sass
 
 .content
-  .main-header
+  .main-header-fixed
     .pop-up-container
-      perspective: 1000px
       #entrance
+        display: none
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
         width: 100%
         max-width: 940px
-        height: 450px
+        height: 500px
         background-color: white
-        position: relative
-        transform-origin: 0% 0%
-        &.show
-          display: block
-          margin: 0 auto
-          animation:
-            name: spindown
-            duration: 400ms
-            timing-function: ease-in-out
-            fill-mode: forwards
+
+
         h1
           position: relative
           color: $main-blue
@@ -27,8 +22,8 @@
           background-color: #f1f1f1
           margin: 0
           text-align: center
-          padding-top: 9px
-          padding-bottom: 9px
+          padding-top: 11px
+          padding-bottom: 11px
           font-weight: 400
           .close
             cursor: pointer
@@ -112,23 +107,151 @@
                 max-width: 380px
                 float: right
 
-@keyframes spindown
-  0%
-    opacity: .5
-    transform: rotateX(-90deg)
-    transition: transform 500ms ease-out
-  100%
-      opacity: 1
-      transform: rotateX(0deg)
-      transition: transform 500ms ease-out
 
-@keyframes spinup
-  0%
-    opacity: 1
-    transform: rotateX(0deg)
-    transition: transform 500ms ease-out
 
-  100%
-      opacity: 1
-      transform: rotateX(-90deg)
-      transition: transform 500ms ease-out
+
+      #faq
+        display: none
+        overflow: scroll
+        overflow-x: hidden
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
+        width: 100%
+        max-width: 940px
+        min-height: 500px
+        background-color: white
+        transform-origin: 0% 0%
+        h1
+          position: relative
+          color: $main-blue
+          font-family: $myriad
+          font-size: 30px
+          background-color: #f1f1f1
+          margin: 0
+          text-align: center
+          padding-top: 11px
+          padding-bottom: 11px
+          font-weight: 400
+          .close
+            cursor: pointer
+            position: absolute
+            top: 17px
+            right: 40px
+            width: 20px
+            height: 20px
+            transition: transform 50ms ease-in-out
+            &:hover
+              transform: scale(1.2)
+              transition: transform 50ms ease-in-out
+        .info
+          height: 100px
+          padding: 20px
+          color: #767676
+          font-size: 18px
+          font-family: $myriad
+          font-weight: 400
+          span
+            font-weight: 600
+
+
+      #tarify
+        display: none
+        overflow: scroll
+        overflow-x: hidden
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
+        width: 100%
+        max-width: 940px
+        min-height: 500px
+        background-color: white
+        transform-origin: 0% 0%
+        h1
+          position: relative
+          color: $main-blue
+          font-family: $myriad
+          font-size: 30px
+          background-color: #f1f1f1
+          margin: 0
+          text-align: center
+          padding-top: 11px
+          padding-bottom: 11px
+          font-weight: 400
+          .close
+            cursor: pointer
+            position: absolute
+            top: 17px
+            right: 40px
+            width: 20px
+            height: 20px
+            transition: transform 50ms ease-in-out
+            &:hover
+              transform: scale(1.2)
+              transition: transform 50ms ease-in-out
+        .info
+          h5
+            margin: 0 0 25px 0
+            font-family: $myriad
+            font-size: 24px
+            font-weight: 600
+            text-align: center
+          height: 100px
+          padding: 20px
+          color: #767676
+          font-size: 18px
+          font-family: $myriad
+          font-weight: 400
+          span
+            font-weight: 600
+
+      #confidentiality
+        display: none
+        overflow: scroll
+        overflow-x: hidden
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
+        width: 100%
+        max-width: 940px
+        min-height: 500px
+        background-color: white
+        transform-origin: 0% 0%
+        h1
+          position: relative
+          color: $main-blue
+          font-family: $myriad
+          font-size: 30px
+          background-color: #f1f1f1
+          margin: 0
+          text-align: center
+          padding-top: 11px
+          padding-bottom: 11px
+          font-weight: 400
+          text-transform: uppercase
+          .close
+            cursor: pointer
+            position: absolute
+            top: 17px
+            right: 40px
+            width: 20px
+            height: 20px
+            transition: transform 50ms ease-in-out
+            &:hover
+              transform: scale(1.2)
+              transition: transform 50ms ease-in-out
+        .info
+          h5
+            margin: 0 0 25px 0
+            font-family: $myriad
+            font-size: 24px
+            font-weight: 600
+            text-align: center
+          height: 100px
+          padding: 20px
+          color: #767676
+          font-size: 18px
+          font-family: $myriad
+          font-weight: 400
+          span
+            font-weight: 600

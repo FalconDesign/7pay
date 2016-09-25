@@ -3,31 +3,31 @@
 .content
   +size(100%, null, null, 700px)
   background: url('../img/11.jpg') no-repeat  center/cover
-  #particles-js
-    position: absolute
-    height: 700px
-    width: 100%
-    canvas
+  background-attachment: fixed
+
+  .main-header-fixed
+    position: fixed !important
+    display: none
+    z-index: 1001 !important
+    .shadow
+      display: none
       position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-  .main-header
-    position: relative
-    z-index: 999
-    &.dark
-      background-color: #343434
-      position: fixed
-      z-index: 1000
+      z-index: -1
       width: 100%
-      .pop-up-container
-        display: block
-        animation:
-          name: shadow
-          duration: 300ms
-          timing-function: ease-in-out
-          fill-mode: forwards
+      height: 100%
+      background-color: #343434
+    .main-nav
+      .seven-pay
+        color: $main-green !important
+    .pop-up-container
+      display: none
+      background-color: fade-out(black, 0.5)
+
+  .main-header,
+  .main-header-fixed
+    position: absolute
+    z-index: 1000
+    width: 100%
 
     .main-nav
       +wrap()
@@ -40,7 +40,7 @@
         margin-top: -24px
         margin-left: 48px
         font-size: 111px
-        color: $main-green
+        color: white
         font-family: $myriad-bold
         font-weight: 700
         font-style: italic
@@ -74,13 +74,17 @@
       display: none
 
   .currency-stripe
-    background: white
     display: flex
     align-items: center
     position: relative
     z-index: 999
-    &.move-down
-      padding-top: 115px
+    padding-top: 115px
+    .wrap
+      width: 100%
+      background-color: white
+      .currency
+        margin: 0 auto
+
 
 
     .currency
@@ -132,7 +136,7 @@
               margin: 0
               cursor: pointer
               +size(100%, auto, 140px, null)
-              perspective: 1000
+              perspective: 1000px
               &.open
                 li:nth-child(1n+2)
                   display: flex
@@ -256,9 +260,3 @@
   100%
     opacity: 1
     transform: rotateY(0deg) translateY(0px)
-
-@keyframes shadow
-  0%
-    background-color: fade-out(black, 1)
-  100%
-    background-color: fade-out(black, 0.5)
