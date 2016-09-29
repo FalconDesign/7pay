@@ -117,7 +117,8 @@
             perspective: 600; }
             .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2) {
               display: flex;
-              opacity: 0; }
+              opacity: 0;
+              box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3); }
               .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(1) {
                 animation-name: menu;
                 animation-duration: 300ms;

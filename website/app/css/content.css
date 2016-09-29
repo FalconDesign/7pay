@@ -22,7 +22,8 @@
 .content {
   width: 100%;
   min-height: 700px;
-  background: url("../img/11.jpg") no-repeat center/cover;
+  background: url("../img/11.jpg") no-repeat center 0px;
+  background-size: cover;
   background-attachment: fixed; }
   .content .main-header-fixed {
     position: fixed !important;
@@ -144,15 +145,17 @@
         flex-wrap: wrap; }
         .content .fill-application form .switch-container .left-input,
         .content .fill-application form .switch-container .right-input {
+          position: relative;
+          z-index: 1000;
           width: 100%;
           max-width: 430px; }
           .content .fill-application form .switch-container .left-input .heading,
           .content .fill-application form .switch-container .right-input .heading {
             margin-left: 24px;
             color: white;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 36px;
-            font-weight: 300; }
+            font-weight: 100 !important; }
           .content .fill-application form .switch-container .left-input div,
           .content .fill-application form .switch-container .right-input div {
             display: flex; }
@@ -234,7 +237,8 @@
                 font-family: "MyriadProRegular", sans-serif;
                 font-size: 40px;
                 font-weight: 400;
-                border-radius: 30px; }
+                border-radius: 30px;
+                box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3); }
                 .content .fill-application form .switch-container .left-input div .switcher li:nth-child(1n+2):hover,
                 .content .fill-application form .switch-container .right-input div .switcher li:nth-child(1n+2):hover {
                   background-color: #bbf02c; }
@@ -267,7 +271,8 @@
         .content .fill-application form .add-info .mail,
         .content .fill-application form .add-info .phone-number {
           margin-bottom: 21px;
-          display: flex; }
+          display: flex;
+          position: relative; }
           .content .fill-application form .add-info .mail .envelope,
           .content .fill-application form .add-info .mail .phone,
           .content .fill-application form .add-info .phone-number .envelope,
@@ -300,6 +305,39 @@
             .content .fill-application form .add-info .phone-number input[type="email"]:focus,
             .content .fill-application form .add-info .phone-number input[type="text"]:focus {
               outline: none; }
+          .content .fill-application form .add-info .mail .hint,
+          .content .fill-application form .add-info .phone-number .hint {
+            display: none;
+            position: absolute;
+            right: -240px;
+            top: 20px; }
+            .content .fill-application form .add-info .mail .hint span,
+            .content .fill-application form .add-info .phone-number .hint span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              background-color: white;
+              width: 222px;
+              height: 31px;
+              border-radius: 30px;
+              color: #ff253a;
+              font-family: "MyriadProSemiBold", sans-serif;
+              font-size: 16px; }
+              .content .fill-application form .add-info .mail .hint span .triangle,
+              .content .fill-application form .add-info .phone-number .hint span .triangle {
+                display: block;
+                position: absolute;
+                background-color: transparent;
+                top: 50%;
+                margin-top: -5px;
+                left: -9px;
+                width: 0;
+                height: 0;
+                border-radius: 0;
+                border-right: 10px solid white;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent; }
         .content .fill-application form .add-info button[type="submit"] {
           border: none;
           width: 100%;

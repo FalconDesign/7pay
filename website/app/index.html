@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>7PAY</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
   </head>
   <body>
     <div id="page">
-      <div class="page-container">
+      <main class="page-container">
         <section id="content" class="content">
           <header class="main-header-fixed">
             <div class="shadow"></div>
@@ -79,7 +80,7 @@
             </div>
           </div>
           <div class="fill-application">
-            <form>
+            <form id="main-form" action="getinfo.php" method="post">
               <div class="switch-container">
                 <div class="left-input"><span class="heading">Вы отдаете</span>
                   <div>
@@ -89,7 +90,7 @@
                       <li>UAH</li>
                       <li>BTC</li>
                     </ul>
-                    <input type="text" placeholder="00.00">
+                    <input id="ugive" type="text" placeholder="00.00" name="ugive">
                   </div>
                 </div>
                 <div class="right-input"><span class="heading">Вы получаете</span>
@@ -100,18 +101,21 @@
                       <li>UAH</li>
                       <li>BTC</li>
                     </ul>
-                    <input type="text" placeholder="00.00">
+                    <input id="uget" type="text" placeholder="00.00" name="uget">
                   </div>
                 </div>
               </div>
               <div class="add-info"><span class="heading">Внесите свои данные:</span>
                 <div class="mail"><span class="envelope"><img src="img/email.png"></span>
-                  <input type="email">
+                  <input type="email" name="email">
+                  <div class="hint email"> <span>Это поле не заполнено!<span class="triangle"></span></span></div>
                 </div>
                 <div class="phone-number"><span class="phone"><img src="img/phone.png"></span>
-                  <input type="text">
+                  <input type="text" name="phonenumber">
+                  <div class="hint number"><span>Это поле не заполнено!<span class="triangle"></span></span></div>
                 </div>
-                <button type="submit">Оформить заявку!</button>
+                <button type="submit" value="send data" name="submit">Оформить заявку!</button>
+                <div class="loader-submit"></div>
               </div>
             </form>
           </div>
@@ -184,6 +188,9 @@
         <footer class="sevenpay-footer">
           <div class="wrap"><a href="#content">Обмен</a><a href="#tarify" class="popup">Тарифы</a><a href="#confidentiality" class="popup">Конфиденциальность</a><a href="#about">О нас</a><a href="#faq" class="popup">FAQ</a><a href="#contact">Контакты</a><a href="#">Новости</a></div>
         </footer>
+      </main>
+      <div id="load-spinner">
+        <div class="loader"></div>
       </div>
     </div>
     <script src="scripts/jquery-3.1.0.min.js"></script>

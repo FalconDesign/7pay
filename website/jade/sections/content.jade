@@ -403,7 +403,7 @@ section.content#content
 
     
   .fill-application
-    form
+    form#main-form(action="getinfo.php", method="post")
       .switch-container
         .left-input
           span.heading Вы отдаете
@@ -414,7 +414,7 @@ section.content#content
               li USD
               li UAH
               li BTC
-            input(type="text", placeholder="00.00")
+            input#ugive(type="text", placeholder="00.00", name="ugive")
               
         .right-input
           span.heading Вы получаете
@@ -425,22 +425,29 @@ section.content#content
               li USD
               li UAH
               li BTC
-            input(type="text", placeholder="00.00")
+            input#uget(type="text", placeholder="00.00", name="uget")
               
       .add-info
         span.heading Внесите свои данные:
         .mail
           span.envelope
             img(src="img/email.png")
-          input(type="email")
-          
+          input(type="email", name="email")
+          .hint.email 
+            span Это поле не заполнено!
+              span.triangle
           
         .phone-number
           span.phone
             img(src="img/phone.png")
-          input(type="text")
+          input(type="text", name="phonenumber")
+          .hint.number
+            span Это поле не заполнено!
+              span.triangle
             
-        button(type="submit", ) Оформить заявку!
+        button(type="submit", value="send data", name="submit") Оформить заявку!
+        .loader-submit
+
           
 
         

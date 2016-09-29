@@ -4,13 +4,14 @@ html
     meta(charset="utf-8")
     title 7PAY
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,700", rel="stylesheet")   
     link(rel="stylesheet", type="text/css", href="css/normalize.css")
     link(rel="stylesheet", type="text/css", href="css/all.css")
   body
     
     #page
       
-      .page-container
+      main.page-container
         
         include sections/content.jade
         
@@ -23,6 +24,9 @@ html
         include sections/reserve.jade
         
         include sections/footer.jade
+        
+      #load-spinner
+        .loader
            
     script(src="scripts/jquery-3.1.0.min.js")
     script(src="scripts/functions.js")

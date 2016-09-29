@@ -1,0 +1,11 @@
+#load-spinner {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10000;
+  background: linear-gradient(#87c3ed, #d6f08f);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
