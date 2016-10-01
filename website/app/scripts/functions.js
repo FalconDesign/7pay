@@ -8,12 +8,12 @@ currencyDropDown();
 smoothScroll();
 entranceEvt();
 mainFormSubmit();
+splashBLock();
 
 });
 
 // Check for the blank inputs
 // Form validation
-
 
 let mainFormSubmit = () => {
   let mainForm    = $('#main-form'),
@@ -145,7 +145,7 @@ let currencyDropDown = () => {
 
 let smoothScroll = () => {
   $(document).on('click', 'a[href^="#contact"], a[href^="#about"], a[href^="#content"]', (evt) => {
-    event.preventDefault();
+    evt.preventDefault();
     $('html, body').animate({
         scrollTop: $( $.attr(evt.currentTarget, 'href') ).offset().top
     }, 500);
@@ -246,5 +246,24 @@ let entranceEvt = () => {
       for (let item of toClose) {
         item.fadeOut(350);
       }
+  });
+};
+
+// News splash window
+
+let splashBLock = () => {
+  let readAlls        = $('.read-all'),
+      header          = $('.main-header-fixed'),
+      shadow          = $('.shadow'),
+      popUpContainer  = $('.pop-up-container'),
+      article         = $('article.one');
+
+
+      readAlls.on('click', (evt) => {
+        let $this   = $(evt.currentTatget);
+        header        .fadeIn(350);
+        shadow        .fadeIn(350);
+        popUpContainer.fadeIn(350);
+        article       .fadeIn(350);
   });
 };

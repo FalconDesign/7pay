@@ -1,0 +1,97 @@
+@import ../variables.sass
+
+#page-news
+  .page-container
+    .main-header-fixed
+      position: fixed !important
+      display: none
+      z-index: 1001 !important
+      .shadow
+        display: none
+        position: absolute
+        z-index: -1
+        width: 100%
+        height: 100%
+        background-color: #343434
+      .main-nav
+        .seven-pay
+          color: $main-green !important
+      .pop-up-container
+        display: none
+        background-color: fade-out(black, 0.5)
+      +header()
+      +headerFixed()
+
+    .main-header
+      background: white
+      +header()
+      position: relative !important
+      .main-nav
+        .seven-pay
+          color: $main-blue
+          .pay
+        .nav-list
+          a
+            color: #a0a0a0
+
+
+    .content-news
+      position: relative
+      min-height: 930px
+      background: url('../../app/img/background-image.jpg') no-repeat center/cover
+      background-attachment: fixed
+      padding-top: 1px
+
+      h1
+        background-color: white
+        text-align: center
+        margin: 40px 0 0 0
+        color: #1c95e9
+        font-family: $myriad
+        font-size: 60px
+        font-weight: 300
+
+      .wrap
+        +wrap()
+        #news-container
+          margin-top: 40px
+          display: flex
+          justify-content: space-between
+          flex-wrap: wrap
+          .news
+            padding: 5px 10px 10px 10px
+            width: 300px
+            height: 300px
+            background-color: white
+            margin-bottom: 20px
+            box-shadow: 2px 2px 12px 0px fade-out(black, 0.5)
+
+            h3
+              margin: 0 0 5px 0
+              color: #1c95e8
+              font-family: $myriad-semibold
+              font-size: 24px
+              font-weight: 600
+            .short-article
+              color: #767676
+              font-family: $myriad
+              font-size: 14px
+              font-weight: 400
+
+            .read-all
+              display: block
+              text-align: right
+              color: #1c95e8
+              font-family: $myriad
+              font-size: 18px
+              font-weight: 400
+              text-decoration: underline
+              cursor: pointer
+              &:hover
+                text-decoration: none
+
+
+      .sevenpay-footer
+        .wrap
+          a
+            color: white

@@ -1,5 +1,7 @@
 @import variables.sass
 
+
+
 .content
   +size(100%, null, null, 700px)
   background: url('../img/11.jpg') no-repeat  center 0px
@@ -26,47 +28,7 @@
 
   .main-header,
   .main-header-fixed
-    position: absolute
-    z-index: 1000
-    width: 100%
-
-    .main-nav
-      +wrap()
-      display: flex
-      justify-content: space-between
-      align-items: center
-      height: 115px
-
-      .seven-pay
-        margin-top: -24px
-        margin-left: 48px
-        font-size: 111px
-        color: white
-        font-family: $myriad-bold
-        font-weight: 700
-        font-style: italic
-        letter-spacing: -0.075em
-        .pay
-          font-size: 78px
-          letter-spacing: initial
-          display: inline-block
-
-      .nav-list
-        margin: 0
-        display: flex
-        justify-content: space-between
-        width: 570px
-        a
-          color: white
-          font-family: $myriad
-          font-size: 30px
-          font-weight: 400
-          &:hover
-            color: $main-blue
-        a:last-child
-          font-family: $myriad-semibold
-          color: $main-blue
-          font-weight: 600
+    +header()
 
     .pop-up-container
       position: fixed
