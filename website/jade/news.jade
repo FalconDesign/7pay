@@ -13,13 +13,12 @@ html
         header.main-header-fixed
           .shadow
           nav.main-nav
-            .seven-pay 7
+            a(href="index.html").seven-pay 7
               span.pay PAY
             .nav-list
                 a(href="index.html") ГЛАВНАЯ
                 a.popup(href="#tarify") ТАРИФЫ
                 a.popup(href="#faq") FAQ
-                a(href="#contact") КОНТАКТЫ
                 a.popup(href="#entrance") ВХОД
           .pop-up-container
             #entrance
@@ -406,13 +405,12 @@ html
                 
         header.main-header
           nav.main-nav
-            .seven-pay 7
+            a(href="index.html").seven-pay 7
               span.pay PAY
             .nav-list
                 a(href="index.html") ГЛАВНАЯ
                 a.popup(href="#tarify") ТАРИФЫ
                 a.popup(href="#faq") FAQ
-                a(href="#contact") КОНТАКТЫ
                 a.popup(href="#entrance") ВХОД
         
         section.content-news      
@@ -469,7 +467,8 @@ html
               a.popup(href="#faq") FAQ
               a.popup(href="index.html") Главная
               a.popup(href="#entrance") Вход
-           
+      #load-spinner
+        .loader     
     script(src="scripts/jquery-3.1.0.min.js")
     script(src="scripts/functions.js")
     

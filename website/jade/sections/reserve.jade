@@ -18,11 +18,15 @@ section.reserve
           |Вы получите уведомление.
       
       #form-reserve
-        form
+        .successful
+          h3 Спасибо! </br>Ваша Заявка принята! </br>Мы свяжемся с вами в скором времени!
+          button Продолжить
+          
+        form(action="getinfo.php" method="post")
           .mail
             span.envelope
               img(src="img/email.png")
-            input(type="email")
+            input(type="email" name="email")
           
           .info-container
             .info
@@ -33,6 +37,8 @@ section.reserve
                   li USD
                   li UAH
                   li BTC
-                input(type="text")
-            button(type="submit") Узнать!
+                input(type="text" name="ugive")
+            button(type="submit" value="send info") Узнать!
+            .loader-submit
+            
               

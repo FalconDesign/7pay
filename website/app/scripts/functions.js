@@ -8,7 +8,8 @@ currencyDropDown();
 smoothScroll();
 entranceEvt();
 mainFormSubmit();
-splashBLock();
+reserveFormSubmit();
+splashBLockNews();
 
 });
 
@@ -16,17 +17,25 @@ splashBLock();
 // Form validation
 
 let mainFormSubmit = () => {
-  let mainForm    = $('#main-form'),
-      inputEmail  = $('input[name="email"]'),
-      inputNumber = $('input[name="phonenumber"]'),
-      inputUGet   = $('#uget'),
-      inputUGive  = $('#ugive'),
-      hintMail    = $('.email'),
-      hintNumber  = $('.number'),
-      btnSubmit   = $('button[type="submit"]'),
-      spinner     = $('.loader-submit'),
-      allHints    = $('.hint');
+  let mainForm      = $('#main-form'),
+      inputEmail    = $('input[name="email"]'),
+      inputNumber   = $('input[name="phonenumber"]'),
+      inputUGet     = $('#uget'),
+      inputUGive    = $('#ugive'),
+      hintMail      = $('.email'),
+      hintNumber    = $('.number'),
+      btnSubmit     = $('button[type="submit"]'),
+      spinner       = $('.loader-submit'),
+      successful    = $('.successful'),
+      successfulBtn = successful.find('button'),
+      allHints      = $('.hint');
 
+
+  successfulBtn.on('click', (event) => {
+      let $this   = $(event.currentTarget),
+          parent  = $(event.currentTarget).parent();
+      if (parent.is(':visible')) parent.hide();
+  });
 
   mainForm.submit((evt) => {
 
@@ -57,6 +66,7 @@ let mainFormSubmit = () => {
           btnSubmit.show();
         },
         success: () => {
+          successful.show();
           $this.find(':input').val('');
         }
       });
@@ -117,6 +127,80 @@ let mainFormSubmit = () => {
       inputUGive.css({boxShadow: 'inset 0px 0px 10px 0px transparent'});}
   });
 };
+
+let reserveFormSubmit = () => {
+  let formReserve = $('#form-reserve form'),
+      inputEmail  = formReserve.find('input[type="email"]'),
+      inputCurr   = formReserve.find('input[type="text"]'),
+      btn         = formReserve.find('button[type="submit"]'),
+      loader      = formReserve.find('.loader-submit'),
+      ajaxSuccess = $('#form-reserve .successful');
+
+
+
+  inputCurr.on('keypress', (key) => {
+    if(key.charCode < 48 || key.charCode > 57) return false;
+  });
+
+  inputEmail.on('input', () => {
+    if (inputEmail.css({boxShadow: "inset 0px 0px 0px 1px red"})) {
+      inputEmail.css({boxShadow: "inset 0px 0px 0px 1px transparent"});}
+  });
+
+  inputCurr.on('input', () => {
+    if (inputCurr.css({boxShadow: "inset 0px 0px 0px 1px red"})) {
+      inputCurr.css({boxShadow: "inset 0px 0px 0px 1px transparent"});}
+  });
+
+  formReserve.submit((evt) => {
+
+    if (inputEmail.val() != "" && inputCurr.val() != "") {
+      let $this = $(evt.currentTarget),
+          url   = $this.attr('action'),
+          type  = $this.attr('method'),
+          data  = {};
+
+      $this.find('[name]').each((index, value) => {
+        let item        = $(value),
+            name        = item.attr('name'),
+            itemValue   = item.val();
+            data[name]  = itemValue;
+      });
+
+      $.ajax({
+        url: url,
+        type: type,
+        data: data,
+        beforeSend: () => {
+          btn.hide();
+          loader.show();},
+        complete: () => {
+          loader.hide();
+          btn.show();},
+        success: () => {
+          inputEmail.add(inputCurr).val('');
+          ajaxSuccess.show();
+        }
+      });
+      evt.preventDefault();
+    }
+
+    else {
+      if (inputEmail.val() == "") {
+        inputEmail.css({boxShadow: "inset 0px 0px 0px 1px red"});
+        evt.preventDefault();}
+
+      else if (inputCurr.val() == "") {
+        inputCurr.css({boxShadow: "inset 0px 0px 0px 1px red"});
+        evt.preventDefault();}
+
+      if (inputEmail.val() == "" && inputCurr.val() == "") {
+        inputEmail.css({boxShadow: "inset 0px 0px 0px 1px red"});
+        inputCurr.css({boxShadow: "inset 0px 0px 0px 1px red"});
+        evt.preventDefault();}
+      }
+  });
+}
 
 //Spinner on fades out on window load
 
@@ -182,6 +266,7 @@ let entranceEvt = () => {
       tarify          = $('#tarify'),
       closeImg        = $('.close'),
       header          = $('.main-header-fixed'),
+      mainNav         = header.find('.main-nav'),
       popUp           = $('.popup'),
       shadow          = $('.shadow');
 
@@ -241,17 +326,24 @@ let entranceEvt = () => {
     }
   });
 
-    closeImg.on('click', () => {
-      let toClose = [entranceForm, faq, tarify, confidentiality, popUpContainer, header];
-      for (let item of toClose) {
-        item.fadeOut(350);
-      }
-  });
+    let closeTargets = [closeImg, popUpContainer, shadow, header];
+    for (let targ of closeTargets) {
+        targ.on('click', (e) => {
+          let toClose = [entranceForm, faq, tarify, confidentiality, popUpContainer, header];
+            for (let item of toClose) {
+              item.fadeOut(350);
+          }
+      });
+      targ.children().on('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+
 };
 
 // News splash window
 
-let splashBLock = () => {
+let splashBLockNews = () => {
   let readAlls        = $('.read-all'),
       header          = $('.main-header-fixed'),
       shadow          = $('.shadow'),
@@ -260,10 +352,11 @@ let splashBLock = () => {
 
 
       readAlls.on('click', (evt) => {
-        let $this   = $(evt.currentTatget);
-        header        .fadeIn(350);
-        shadow        .fadeIn(350);
-        popUpContainer.fadeIn(350);
-        article       .fadeIn(350);
+        let $this         = $(evt.currentTatget),
+            itemsToClose  = [header, shadow, popUpContainer, article];
+
+            for (let item of itemsToClose) {
+              item.fadeIn(350);
+      }
   });
 };

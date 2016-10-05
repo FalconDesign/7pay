@@ -12,6 +12,11 @@
     <div id="page">
       <main class="page-container">
         <section id="content" class="content">
+          <div class="successful">
+            <h3>Спасибо!</br> Ваша Заявка отправлена на обработку.</br> С Вами свяжется наш менеджер!</h3>
+            <h3>BTC адрес: </br> ej8ufes8ousofuos</h3>
+            <button>Продолжить</button>
+          </div>
           <header class="main-header-fixed">
             <div class="shadow"></div>
             <nav class="main-nav">
@@ -162,9 +167,13 @@
                   Вы получите уведомление.</span>
               </h1>
               <div id="form-reserve">
-                <form>
+                <div class="successful">
+                  <h3>Спасибо! </br>Ваша Заявка принята! </br>Мы свяжемся с вами в скором времени!</h3>
+                  <button>Продолжить</button>
+                </div>
+                <form action="getinfo.php" method="post">
                   <div class="mail"><span class="envelope"><img src="img/email.png"></span>
-                    <input type="email">
+                    <input type="email" name="email">
                   </div>
                   <div class="info-container">
                     <div class="info">
@@ -175,10 +184,11 @@
                           <li>UAH</li>
                           <li>BTC</li>
                         </ul>
-                        <input type="text">
+                        <input type="text" name="ugive">
                       </div>
                     </div>
-                    <button type="submit">Узнать!</button>
+                    <button type="submit" value="send info">Узнать!</button>
+                    <div class="loader-submit"></div>
                   </div>
                 </form>
               </div>

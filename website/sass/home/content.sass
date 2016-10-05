@@ -1,12 +1,47 @@
 @import variables.sass
 
-
-
 .content
   +size(100%, null, null, 700px)
   background: url('../img/11.jpg') no-repeat  center 0px
   background-size: cover
   background-attachment: fixed
+  position: relative
+
+  .successful
+    display: none
+    width: 100%
+    max-width: 620px
+    min-height: 325px
+    position: absolute
+    background: linear-gradient(white 40%, #87c3ed)
+    z-index: 1000
+    top: 73%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    box-shadow: 0px 3px 10px 0px fade-out(black, 0.5)
+    text-align: center
+    h3
+      color: #565656
+      font-size: 30px
+      font-weight: $roboto
+      font-weight: 300
+    button
+      width: 200px
+      height: 50px
+      background: linear-gradient( to right, $main-green, $main-blue)
+      color: white
+      border: none
+      cursor: pointer
+      border-radius: 30px
+      font-size: 24px
+      font-family: $myriad-semibold
+      font-style: italic
+      box-shadow: 0px 2px 2px 0px fade-out(black, 0.7)
+      &:focus
+        outline: none
+      &:hover
+        background: linear-gradient( to right, $main-blue, $main-green)
 
   .main-header-fixed
     position: fixed !important

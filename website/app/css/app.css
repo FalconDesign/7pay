@@ -49,7 +49,43 @@ body {
   min-height: 700px;
   background: url("../img/11.jpg") no-repeat center 0px;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  position: relative; }
+  .content .successful {
+    display: none;
+    width: 100%;
+    max-width: 620px;
+    min-height: 325px;
+    position: absolute;
+    background: linear-gradient(white 40%, #87c3ed);
+    z-index: 1000;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center; }
+    .content .successful h3 {
+      color: #565656;
+      font-size: 30px;
+      font-weight: "Roboto", sans-serif;
+      font-weight: 300; }
+    .content .successful button {
+      width: 200px;
+      height: 50px;
+      background: linear-gradient(to right, #bbf02c, #1c95e9);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 24px;
+      font-family: "MyriadProSemiBold", sans-serif;
+      font-style: italic;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3); }
+      .content .successful button:focus {
+        outline: none; }
+      .content .successful button:hover {
+        background: linear-gradient(to right, #1c95e9, #bbf02c); }
   .content .main-header-fixed {
     position: fixed !important;
     display: none;
@@ -626,145 +662,186 @@ body {
         font-size: 28px;
         font-weight: 300;
         letter-spacing: -2px; }
-    .reserve .wrap .right #form-reserve form .mail {
-      margin-top: 20px;
-      display: flex; }
-      .reserve .wrap .right #form-reserve form .mail .envelope {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .reserve .wrap .right #form-reserve {
+      position: relative; }
+      .reserve .wrap .right #form-reserve .successful {
+        display: none;
         width: 100%;
-        max-width: 80px;
-        height: 56px;
-        background-color: #1c95e9;
-        border-radius: 30px 0 0 30px;
+        left: -1px;
+        top: 0;
+        right: 0;
+        bottom: -40px;
+        position: absolute;
+        background: linear-gradient(white, #87c3ed);
+        z-index: 1000;
+        border-radius: 30px;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
         text-align: center; }
-        .reserve .wrap .right #form-reserve form .mail .envelope img {
-          width: 43px;
-          height: 30px; }
-      .reserve .wrap .right #form-reserve form .mail input[type="email"] {
-        text-align: center;
-        width: 100%;
-        max-width: 380px;
-        height: 56px;
-        border: none;
-        border-radius: 0 30px 30px 0;
-        color: #565656;
-        font-family: "Open Sans", sans-serif;
-        font-size: 38px;
-        font-weight: 300; }
-        .reserve .wrap .right #form-reserve form .mail input[type="email"]:focus {
-          outline: none; }
-    .reserve .wrap .right #form-reserve form .info-container {
-      display: flex;
-      align-items: flex-end; }
-      .reserve .wrap .right #form-reserve form .info-container .info {
-        margin-top: 20px; }
-        .reserve .wrap .right #form-reserve form .info-container .info div {
-          display: flex; }
-          .reserve .wrap .right #form-reserve form .info-container .info div .switcher {
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            cursor: pointer;
-            width: 100%;
-            max-width: 80px;
-            min-height: auto;
-            perspective: 600; }
-            .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2) {
-              display: flex;
-              opacity: 0;
-              box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3); }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(1) {
-                animation-name: menu;
-                animation-duration: 300ms;
-                animation-delay: -150ms;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards; }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(2) {
-                animation-name: menu;
-                animation-duration: 300ms;
-                animation-delay: 0ms;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards; }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(3) {
-                animation-name: menu;
-                animation-duration: 300ms;
-                animation-delay: 150ms;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards; }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(4) {
-                animation-name: menu;
-                animation-duration: 300ms;
-                animation-delay: 300ms;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards; }
-            .reserve .wrap .right #form-reserve form .info-container .info div .switcher li {
-              margin-bottom: 2px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 56px;
-              width: 80px;
-              color: white;
-              font-family: "MyriadProSemiBold", sans-serif;
-              font-size: 24px;
-              font-style: italic; }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher li .arrow {
-                margin-left: 12px;
-                margin-top: 2px;
-                display: inline-block;
-                width: 0;
-                height: 0;
-                border-top: 8px solid white;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent; }
-            .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:first-child {
-              background-color: #1c95e9;
-              border-radius: 30px 0px 0px 30px; }
-            .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:nth-child(1n+2) {
+        .reserve .wrap .right #form-reserve .successful h3 {
+          color: #565656;
+          font-size: 20px;
+          font-weight: "Roboto", sans-serif;
+          font-weight: 300; }
+        .reserve .wrap .right #form-reserve .successful button {
+          width: 200px;
+          height: 50px;
+          background: linear-gradient(to right, #bbf02c, #1c95e9);
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 30px;
+          font-size: 24px;
+          font-family: "MyriadProSemiBold", sans-serif;
+          font-style: italic;
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3); }
+          .reserve .wrap .right #form-reserve .successful button:focus {
+            outline: none; }
+          .reserve .wrap .right #form-reserve .successful button:hover {
+            background: linear-gradient(to right, #1c95e9, #bbf02c); }
+      .reserve .wrap .right #form-reserve form .mail {
+        margin-top: 20px;
+        display: flex; }
+        .reserve .wrap .right #form-reserve form .mail .envelope {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 80px;
+          height: 56px;
+          background-color: #1c95e9;
+          border-radius: 30px 0 0 30px;
+          text-align: center; }
+          .reserve .wrap .right #form-reserve form .mail .envelope img {
+            width: 43px;
+            height: 30px; }
+        .reserve .wrap .right #form-reserve form .mail input[type="email"] {
+          text-align: center;
+          width: 100%;
+          max-width: 380px;
+          height: 56px;
+          border: none;
+          border-radius: 0 30px 30px 0;
+          color: #565656;
+          font-family: "Open Sans", sans-serif;
+          font-size: 30px;
+          font-weight: 300; }
+          .reserve .wrap .right #form-reserve form .mail input[type="email"]:focus {
+            outline: none; }
+      .reserve .wrap .right #form-reserve form .info-container {
+        display: flex;
+        align-items: flex-end; }
+        .reserve .wrap .right #form-reserve form .info-container .info {
+          margin-top: 20px; }
+          .reserve .wrap .right #form-reserve form .info-container .info div {
+            display: flex; }
+            .reserve .wrap .right #form-reserve form .info-container .info div .switcher {
+              position: absolute;
+              padding: 0;
+              margin: 0;
+              cursor: pointer;
+              width: 100%;
+              max-width: 80px;
+              min-height: auto;
+              perspective: 600; }
+              .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2) {
+                display: flex;
+                opacity: 0;
+                box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3); }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(1) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: -150ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(2) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 0ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(3) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 150ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher.open li:nth-child(1n+2):nth-child(4) {
+                  animation-name: menu;
+                  animation-duration: 300ms;
+                  animation-delay: 300ms;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards; }
+              .reserve .wrap .right #form-reserve form .info-container .info div .switcher li {
+                margin-bottom: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 56px;
+                width: 80px;
+                color: white;
+                font-family: "MyriadProSemiBold", sans-serif;
+                font-size: 24px;
+                font-style: italic; }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher li .arrow {
+                  margin-left: 12px;
+                  margin-top: 2px;
+                  display: inline-block;
+                  width: 0;
+                  height: 0;
+                  border-top: 8px solid white;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent; }
+              .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:first-child {
+                background-color: #1c95e9;
+                border-radius: 30px 0px 0px 30px; }
+              .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:nth-child(1n+2) {
+                width: 100%;
+                max-width: 140px;
+                height: 67px;
+                display: none;
+                background-color: white;
+                color: #454545;
+                font-family: "MyriadProSemiBold", sans-serif;
+                font-size: 24px;
+                border-radius: 30px;
+                font-style: italic; }
+                .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:nth-child(1n+2):hover {
+                  background-color: #1c95e9;
+                  color: white; }
+            .reserve .wrap .right #form-reserve form .info-container .info div input[type="text"] {
+              margin-left: 80px;
               width: 100%;
               max-width: 140px;
-              height: 67px;
-              display: none;
-              background-color: white;
-              color: #454545;
-              font-family: "MyriadProSemiBold", sans-serif;
-              font-size: 24px;
-              border-radius: 30px;
-              font-style: italic; }
-              .reserve .wrap .right #form-reserve form .info-container .info div .switcher li:nth-child(1n+2):hover {
-                background-color: #1c95e9;
-                color: white; }
-          .reserve .wrap .right #form-reserve form .info-container .info div input[type="text"] {
-            margin-left: 80px;
-            width: 100%;
-            max-width: 140px;
-            height: 56px;
-            border-radius: 0px 30px 30px 0px;
-            border: none;
-            text-align: center;
-            color: #565656;
-            font-family: "MyriadProRegular", sans-serif;
-            font-size: 38px;
-            font-weight: 300; }
-            .reserve .wrap .right #form-reserve form .info-container .info div input[type="text"]:focus {
-              outline: none; }
-      .reserve .wrap .right #form-reserve form .info-container button {
-        margin-left: 20px;
-        width: 220px;
-        height: 56px;
-        background-color: #1c95e9;
-        border-radius: 30px;
-        border: 0;
-        cursor: pointer;
-        color: white;
-        font-family: "MyriadProSemiBold", sans-serif;
-        font-size: 24px;
-        font-weight: 300;
-        font-style: italic; }
-        .reserve .wrap .right #form-reserve form .info-container button:focus {
-          outline: none; }
+              height: 56px;
+              border-radius: 0px 30px 30px 0px;
+              border: none;
+              text-align: center;
+              color: #565656;
+              font-family: "MyriadProRegular", sans-serif;
+              font-size: 30px;
+              font-weight: 300; }
+              .reserve .wrap .right #form-reserve form .info-container .info div input[type="text"]:focus {
+                outline: none; }
+        .reserve .wrap .right #form-reserve form .info-container button {
+          margin-left: 20px;
+          width: 220px;
+          height: 56px;
+          background-color: #1c95e9;
+          border-radius: 30px;
+          border: 0;
+          cursor: pointer;
+          color: white;
+          font-family: "MyriadProSemiBold", sans-serif;
+          font-size: 24px;
+          font-weight: 300;
+          font-style: italic; }
+          .reserve .wrap .right #form-reserve form .info-container button:focus {
+            outline: none; }
+        .reserve .wrap .right #form-reserve form .info-container .loader-submit {
+          display: none;
+          top: -20px !important;
+          left: 100px !important;
+          font-size: 10px; }
 
 @font-face {
   font-family: "MyriadProRegular";
@@ -842,6 +919,10 @@ body {
     max-width: 940px;
     height: 500px;
     background-color: white; }
+    @media (min-width: 1400px) {
+      .content .main-header-fixed .pop-up-container #entrance {
+        top: 40%;
+        transform: translate(-50%, -50%); } }
     .content .main-header-fixed .pop-up-container #entrance h1 {
       position: relative;
       color: #1c95e9;
@@ -943,7 +1024,7 @@ body {
     transform: translate(-50%, 0%);
     width: 100%;
     max-width: 940px;
-    min-height: 500px;
+    height: 80vh;
     background-color: white;
     transform-origin: 0% 0%; }
     .content .main-header-fixed .pop-up-container #faq h1 {
@@ -986,7 +1067,7 @@ body {
     transform: translate(-50%, 0%);
     width: 100%;
     max-width: 940px;
-    min-height: 500px;
+    height: 80vh;
     background-color: white;
     transform-origin: 0% 0%; }
     .content .main-header-fixed .pop-up-container #tarify h1 {
@@ -1035,7 +1116,7 @@ body {
     transform: translate(-50%, 0%);
     width: 100%;
     max-width: 940px;
-    min-height: 500px;
+    height: 80vh;
     background-color: white;
     transform-origin: 0% 0%; }
     .content .main-header-fixed .pop-up-container #confidentiality h1 {
@@ -1319,6 +1400,10 @@ body {
       max-width: 940px;
       height: 500px;
       background-color: white; }
+      @media (min-width: 1400px) {
+        #page-news .page-container .main-header-fixed .pop-up-container #entrance {
+          top: 40%;
+          transform: translate(-50%, -50%); } }
       #page-news .page-container .main-header-fixed .pop-up-container #entrance h1 {
         position: relative;
         color: #1c95e9;
@@ -1420,7 +1505,7 @@ body {
       transform: translate(-50%, 0%);
       width: 100%;
       max-width: 940px;
-      min-height: 500px;
+      height: 80vh;
       background-color: white;
       transform-origin: 0% 0%; }
       #page-news .page-container .main-header-fixed .pop-up-container #faq h1 {
@@ -1463,7 +1548,7 @@ body {
       transform: translate(-50%, 0%);
       width: 100%;
       max-width: 940px;
-      min-height: 500px;
+      height: 80vh;
       background-color: white;
       transform-origin: 0% 0%; }
       #page-news .page-container .main-header-fixed .pop-up-container #tarify h1 {
@@ -1512,7 +1597,7 @@ body {
       transform: translate(-50%, 0%);
       width: 100%;
       max-width: 940px;
-      min-height: 500px;
+      height: 80vh;
       background-color: white;
       transform-origin: 0% 0%; }
       #page-news .page-container .main-header-fixed .pop-up-container #confidentiality h1 {

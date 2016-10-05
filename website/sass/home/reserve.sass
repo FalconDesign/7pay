@@ -55,6 +55,41 @@
           letter-spacing: -2px
 
       #form-reserve
+        position: relative
+        .successful
+          display: none
+          width: 100%
+          left: -1px
+          top: 0
+          right: 0
+          bottom: -40px
+          position: absolute
+          background: linear-gradient(white, #87c3ed)
+          z-index: 1000
+          border-radius: 30px
+          box-shadow: 0px 3px 10px 0px fade-out(black, 0.5)
+          text-align: center
+          h3
+            color: #565656
+            font-size: 20px
+            font-weight: $roboto
+            font-weight: 300
+          button
+            width: 200px
+            height: 50px
+            background: linear-gradient( to right, $main-green, $main-blue)
+            color: white
+            border: none
+            cursor: pointer
+            border-radius: 30px
+            font-size: 24px
+            font-family: $myriad-semibold
+            font-style: italic
+            box-shadow: 0px 2px 2px 0px fade-out(black, 0.7)
+            &:focus
+              outline: none
+            &:hover
+              background: linear-gradient( to right, $main-blue, $main-green)
         form
           .mail
             margin-top: 20px
@@ -78,7 +113,7 @@
               border-radius: 0 30px 30px 0
               color: #565656
               font-family: $open-sans
-              font-size: 38px
+              font-size: 30px
               font-weight: 300
               &:focus
                 outline: none
@@ -154,7 +189,7 @@
                   text-align: center
                   color: #565656
                   font-family: $myriad
-                  font-size: 38px
+                  font-size: 30px
                   font-weight: 300
                   &:focus
                     outline: none
@@ -174,3 +209,9 @@
               font-style: italic
               &:focus
                 outline: none
+
+            .loader-submit
+              display: none
+              top: -20px !important
+              left: 100px !important
+              font-size: 10px
